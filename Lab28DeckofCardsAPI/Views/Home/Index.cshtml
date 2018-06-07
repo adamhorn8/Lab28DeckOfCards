@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Remaining Cards: @ViewBag.Remain</h3>
+
+
+@for (int i = 0; i < ViewBag.Cards.Count; i++)
+{
+    <img src="@ViewBag.Cards[i]["image"]" width="100" />
+    <span>@ViewBag.Cards[i]["value"] of @ViewBag.Cards[i]["suit"]</span>
+
+
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<table cellspacing="100">
+    <tr>
+        <th>Card 1</th>
+        <th>Card 2</th>
+        <th>Card 3</th>
+        <th>Card 4</th>
+        <th>Card 5</th>
+    </tr>
+    <tr>
+        <td style="padding-right: 10px;"><img src="@ViewBag.Cards[0]["image"]" width="100" /></td>
+        <td><img src="@ViewBag.Cards[1]["image"]" width="100" /></td>
+        <td><img src="@ViewBag.Cards[2]["image"]" width="100" /></td>
+        <td><img src="@ViewBag.Cards[3]["image"]" width="100" /></td>
+        <td><img src="@ViewBag.Cards[4]["image"]" width="100" /></td>
+    </tr>
+    <tr>
+        <td><span>@ViewBag.Cards[0]["value"] of @ViewBag.Cards[0]["suit"]</span></td>
+        <td><span>@ViewBag.Cards[1]["value"] of @ViewBag.Cards[1]["suit"]</span></td>
+        <td><span>@ViewBag.Cards[2]["value"] of @ViewBag.Cards[2]["suit"]</span></td>
+        <td><span>@ViewBag.Cards[3]["value"] of @ViewBag.Cards[3]["suit"]</span></td>
+        <td><span>@ViewBag.Cards[4]["value"] of @ViewBag.Cards[4]["suit"]</span></td>
+    </tr>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+
+<a href="~/Home/Index" class="btn btn-primary">Re-draw</a>
+<a href="~/Home/Shuffle" class="btn btn-primary">Shuffle</a>
